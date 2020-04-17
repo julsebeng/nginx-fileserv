@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    serv:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: file-nginx
+        ports:
+            - '80:80'
+        volumes:
+            - ./data:/usr/share/nginx/html
